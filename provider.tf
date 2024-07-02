@@ -4,7 +4,7 @@ terraform {
   required_providers {
     tanzu-mission-control = {
       source = "vmware/tanzu-mission-control"
-      version = "1.4.3"
+      version = "1.4.4"
     }
   }
 }
@@ -13,7 +13,7 @@ terraform {
 
 provider "tanzu-mission-control" {
   endpoint            = "emergingsolutionstanzuse.tmc.cloud.vmware.com/" // Required, TMC Org URL
-  vmw_cloud_api_token = "{redacted}"   // Required, API Token
+  vmw_cloud_api_token = "redacted"   // Required, API Token
 }
 
 //variable "SESSION_NAMESPACE" {}

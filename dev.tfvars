@@ -1,18 +1,18 @@
-management_cluster_name = "h2o-humana"       // Management cluster name from TMC
-provisioner_name = "app02-ns"                              // vSphere Namespace to provison cluster in
+management_cluster_name = "h2o-4-24734"       // Management cluster name from TMC
+provisioner_name = "payer-ns"                              // vSphere Namespace to provison cluster in
 
 // Global Cluster Configuration
 
-cluster_name = "tkgc0giri"                              // TKG workload cluster name
-cluster_group = "humana-default"                          // TMC Cluster Group to place cluster
+cluster_name = "payerappc01-tf"                              // TKG workload cluster name
+cluster_group = "payer-apps"                          // TMC Cluster Group to place cluster
 pod_cidr_blocks = "100.96.0.0/11"                      // Subnet to use for Pods per cluster
 service_cidr_blocks = "100.64.0.0/13"                   // Subnet to use for service per cluster
-tkr_version = "v1.26.5+vmware.2-fips.1-tkg.1"           // Version of Tanzu Kubernetes for cluster
+tkr_version = "v1.28.8+vmware.1-fips.1-tkg.2"           // Version of Tanzu Kubernetes for cluster
 cluster_ntp = "time1.oc.vmware.com, time2.oc.vmware.com"
 cluster_storageclass = "vc01cl01-t0compute"
 cluster_storageclasses = "vc01cl01-t0compute"
 cluster_vm_class = "best-effort-small"
-cluster_trusted_ca1 = "harbor-ca"
+cluster_trusted_ca1 = ""
 
 // Control Plane Configuration
 
