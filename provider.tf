@@ -13,7 +13,7 @@ terraform {
 
 provider "tanzu-mission-control" {
   endpoint            = "emergingsolutionstanzuse.tmc.cloud.vmware.com/" // Required, TMC Org URL
-  vmw_cloud_api_token = "redacted"   // Required, API Token
+  vmw_cloud_api_token = var.vmw_cloud_api_token   // Required, API Token
 }
 
 //variable "SESSION_NAMESPACE" {}

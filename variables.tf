@@ -132,3 +132,8 @@ variable "nodepool1_vm_class" {
   description = "VM size for nodepool 1 nodes"
   type        = string
 }
+
+variable "vmw_cloud_api_token" {
+  description = "api token for auth"
+  type        = string
+}
