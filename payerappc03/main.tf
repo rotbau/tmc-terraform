@@ -6,6 +6,7 @@ terraform {
       source = "vmware/tanzu-mission-control"
       version = "1.4.4"
     }
+    alias = tmc
   }
 }
 
@@ -19,19 +20,13 @@ provider "tanzu-mission-control" {
 module "tkgs_cluster" {
   source = "../modules/tkgs-cluster" 
   providers = {
-    tanzu-mission-control = {
-      source = "vmware/tanzu-mission-control"
-      version = "1.4.4"
-    }
+    tanzu-mission-control = tanzu-mission-control.tmc
   }
 }
 
 module "tmc_backup_schedule" {
   source = "../modules/tmc-backup"
   providers = {
-    tanzu-mission-control = {
-      source = "vmware/tanzu-mission-control"
-      version = "1.4.4"
-    }
+    tanzu-mission-control = tanzu-mission-control.tmc
   }
 }
