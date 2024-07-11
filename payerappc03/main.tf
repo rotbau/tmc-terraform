@@ -44,6 +44,4 @@ module "tmc_backup_schedule" {
   backup_scope = var.backup_scope
   storage_location = var.storage_location
   excluded_namespaces = var.excluded_namespaces
-
-  depends_on = [ module.tkgs_cluster ]
 }
