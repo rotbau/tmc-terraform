@@ -5,7 +5,6 @@ terraform {
     tanzu-mission-control = {
       source = "vmware/tanzu-mission-control"
       version = "1.4.4"
-      configuration_aliases = [ tanzu-mission-control.vmware ]
     }
   }
 }
