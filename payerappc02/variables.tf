@@ -1,3 +1,17 @@
+// Global Variables
+
+variable "vmw_cloud_api_token" {
+  description = "api token for auth"
+  type        = string
+}
+
+variable "vmw_tmc_endpoint" {
+  description = "tmc url"
+  type        = string
+}
+
+// TKGs Cluster Variables
+
 variable "management_cluster_name" {
   description = "TKG management cluster name in TMC"
   type        = string
@@ -130,11 +144,6 @@ variable "nodepool1_storageclass" {
 
 variable "nodepool1_vm_class" {
   description = "VM size for nodepool 1 nodes"
-  type        = string
-}
-
-variable "vmw_cloud_api_token" {
-  description = "api token for auth"
   type        = string
 }
 

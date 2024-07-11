@@ -3,6 +3,11 @@ variable "vmw_cloud_api_token" {
   type        = string
 }
 
+variable "vmw_tmc_endpoint" {
+  description = "tmc url"
+  type        = string
+}
+
 variable "credential_name" {
   description = "tmc aks credential name"
   type        = string

@@ -5,6 +5,10 @@ variable "vmw_cloud_api_token" {
   type        = string
 }
 
+variable "vmw_tmc_endpoint" {
+  description = "tmc url"
+  type        = string
+}
 // Git Repo Variables
 
 variable "git_repo_name" {
