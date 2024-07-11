@@ -1,3 +1,12 @@
+terraform {
+  required_providers {
+    tanzu-mission-control = {
+      source = "vmware/tanzu-mission-control"
+      version = "1.4.4"
+    }
+  }
+}
+
 resource "tanzu-mission-control_backup_schedule" "sample-full" {
   depends_on = [tanzu-mission-control_tanzu_kubernetes_cluster.tkgs_cluster]
   name = var.backup_job_name
