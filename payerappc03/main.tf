@@ -21,5 +21,5 @@ module "tkgs_cluster" {
 }
 
 module "tmc_backup_schedule" {
-  source = "../modules/tmc-backup-schedule"
+  source = "../modules/tmc-backup"
 }
