@@ -8,7 +8,6 @@ terraform {
 }
 
 resource "tanzu-mission-control_backup_schedule" "sample-full" {
-  depends_on = [tanzu-mission-control_tanzu_kubernetes_cluster.tkgs_cluster]
   name = var.backup_job_name
   scope {
     cluster {
