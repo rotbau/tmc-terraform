@@ -9,7 +9,7 @@ provider "tanzu-mission-control" {
 module "tkgs_cluster" {
   source = "../modules/tkgs-cluster" 
   providers = {
-    tanzu-mission-control = tanzu-mission-control.tmc
+    tanzu-mission-control = tanzu-mission-control.vmware
   }
 }
 
