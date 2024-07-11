@@ -12,6 +12,20 @@ variable "vmw_tmc_endpoint" {
 
 // TMC Backup Schedule
 
+variable "management_cluster_name" {
+  description = "TKG management cluster name in TMC"
+  type        = string
+}
+
+variable "provisioner_name" {
+  description = "vSphere Namespace to provison cluster to"
+  type        = string
+}
+
+variable "cluster_name" {
+  description = "Name of TKG cluster"
+  type        = string
+}
 variable "backup_job_name" {
   description = "Name for Job"
   type        = string

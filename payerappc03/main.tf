@@ -1,6 +1,8 @@
 module "tkgs_cluster" {
   source = "../modules/tkgs-cluster"
-
+  providers = {
+    tanzu-mission-control = tanzu-mission-control.vmware   
+}
   vmw_cloud_api_token = []
   vmw_tmc_endpoint = []
   management_cluster_name = var.management_cluster_name
@@ -34,7 +36,13 @@ module "tkgs_cluster" {
 
 module "tmc_backup_schedule" {
   source = "../modules/tmc-backup"
+  providers = {
+    tanzu-mission-control = tanzu-mission-control.vmware
+  }
 
+  management_cluster_name = var.management_cluster_name
+  provisioner_name = var.provisioner_name
+  cluster_name = var.cluster_name
   vmw_cloud_api_token = []
   vmw_tmc_endpoint = []
   backup_job_name = var.backup_job_name
