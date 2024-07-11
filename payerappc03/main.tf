@@ -27,7 +27,7 @@ module "tkgs_cluster" {
   nodepool1_worker_replicas = var.nodepool1_worker_replicas
   nodepool1_worker_class = var.nodepool1_worker_class
   nodepool1_os_name = var.nodepool1_os_name
-  nodepool1_os_version = var.nodepool1_os_arch
+  nodepool1_os_version = var.nodepool1_os_version
   nodepool1_os_arch = var.nodepool1_os_arch
   nodepool1_label1_key = var.nodepool1_label1_key
   nodepool1_label1_value = var.nodepool1_label1_value
@@ -50,4 +50,6 @@ module "tmc_backup_schedule" {
   backup_scope = var.backup_scope
   storage_location = var.storage_location
   excluded_namespaces = var.excluded_namespaces
+
+  depends_on = [ module.tkgs_cluster ]
 }
