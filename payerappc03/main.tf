@@ -6,7 +6,7 @@ terraform {
       source = "vmware/tanzu-mission-control"
       version = "1.4.4"
     }
-    alias = tmc
+    alias = "tmc"
   }
 }
 
