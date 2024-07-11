@@ -3,7 +3,7 @@ provisioner_name = "payer-ns"                              // vSphere Namespace 
 
 // Global Cluster Configuration
 
-cluster_name = "payerappc02-tf"                              // TKG workload cluster name
+cluster_name = "payerappc03-tf"                              // TKG workload cluster name
 cluster_group = "payer-apps"                          // TMC Cluster Group to place cluster
 pod_cidr_blocks = "100.96.0.0/11"                      // Subnet to use for Pods per cluster
 service_cidr_blocks = "100.64.0.0/13"                   // Subnet to use for service per cluster
@@ -37,7 +37,7 @@ nodepool1_vm_class = "best-effort-medium"
 
 // Backup Job Configuration
 
-backup_job_name = "payerappc02-daily"
+backup_job_name = "payerappc03-daily"
 backup_scope = "FULL_CLUSTER"
 storage_location = "bauerbo-azure-blob"
 excluded_namespaces = ["kube-system","vmware-system-tmc","default"]
