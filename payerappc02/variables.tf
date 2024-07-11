@@ -49,7 +49,7 @@ variable "tkr_version" {
 
 variable "cluster_ntp" {
   description = "override default NTP per cluster"
-  type        = string
+  type        = list(string)
 }
 
 variable "cluster_trusted_ca1" {
