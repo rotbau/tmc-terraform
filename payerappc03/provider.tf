@@ -8,6 +8,9 @@ terraform {
     }
   }
 }
+provider "tanzu-mission-control" {
+  
+}
 
 // TMC Org configuration
 
