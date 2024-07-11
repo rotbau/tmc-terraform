@@ -1,0 +1,36 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: istio-ingressgateway
+  labels:
+    app.kubernetes.io/part-of: istio
+spec:
+  releaseName: istio-ingressgateway
+  targetNamespace: istio-system  
+  dependsOn:
+    - name: istio-base
+    - name: istiod
+  chart:
+    spec:
+#      version: 1.19.7
+      version: ${chart_version}
+      chart: gateway
+      sourceRef:
+        kind: HelmRepository
+        name: istio
+  interval: 60m
+  values:
+    labels:
+      app: istio-ingressgateway
+      istio: ingressgateway
+    autoscaling:
+      enabled: false
+      minReplicas: 1
+      maxReplicas: 3
+      targetCPUUtilizationPercentage: 80
+    resources:
+      requests:
+        cpu: 10m
+        memory: 128Mi
+    service:
+      type: LoadBalancer

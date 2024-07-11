@@ -1,0 +1,16 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: istio
+  namespace: tanzu-continuousdelivery-resources
+spec:
+  postBuild:
+    substitute:
+      chart_version: 1.20.3
+  interval: 1m0s
+  path: ./addons/base/istio-helm
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-addons-repo
+    namespace: tanzu-continuousdelivery-resources

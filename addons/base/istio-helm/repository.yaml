@@ -1,0 +1,10 @@
+---
+    apiVersion: source.toolkit.fluxcd.io/v1beta2
+    kind: HelmRepository
+    metadata:
+      name: istio
+      labels:
+        app.kubernetes.io/part-of: istio
+    spec:
+      interval: 60m
+      url: https://istio-release.storage.googleapis.com/charts

@@ -1,0 +1,21 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: istio-base
+  labels:
+    app.kubernetes.io/part-of: istio
+spec:
+  releaseName: istio-base
+  install:
+    crds: Create
+  upgrade:
+    crds: CreateReplace
+  chart:
+    spec:
+      version: ${chart_version}
+#      version: 1.19.7
+      chart: base
+      sourceRef:
+        kind: HelmRepository
+        name: istio
+  interval: 60m

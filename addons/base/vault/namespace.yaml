@@ -1,0 +1,8 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: vault
+  labels:
+    app.kubernetes.io/component: vault
+    pod-security.kubernetes.io/enforce: privileged
