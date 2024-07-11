@@ -4,15 +4,6 @@ data "tanzu-mission-control_cluster_class" "tkc-cc" {
   provisioner_name        = var.provisioner_name
 }
 
-terraform {
-  required_providers {
-    tanzu-mission-control = {
-      source = "vmware/tanzu-mission-control"
-      version = "1.4.4"
-    }
-  }
-}
-
 locals {
   tkgs_cluster_variables = {
     "controlPlaneCertificateRotation" : {
