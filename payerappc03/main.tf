@@ -42,11 +42,15 @@ module "tmc_backup_schedule" {
 
   management_cluster_name = var.management_cluster_name
   provisioner_name = var.provisioner_name
-  cluster_name = "${module.tkgs_cluster.tanzu-mission-control_tanzu_kubernetes_cluster.tkgs_cluster.name}"
+  cluster_name = "${module.tkgs_cluster.tanzu-mission-control_tanzu_kubernetes_cluster.tkgs_cluster.cluster_name}"
   vmw_cloud_api_token = var.vmw_cloud_api_token
   vmw_tmc_endpoint = var.vmw_tmc_endpoint
   backup_job_name = var.backup_job_name
   backup_scope = var.backup_scope
   storage_location = var.storage_location
   excluded_namespaces = var.excluded_namespaces
+}
+
+output "cluster_name" {
+ value = module.tkgs_cluster.tanzu-mission-control_tanzu_kubernetes_cluster.tkgs_cluster.name
 }
