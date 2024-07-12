@@ -37,7 +37,7 @@ nodepool1_vm_class = "best-effort-medium"
 
 // Backup Job Configuration
 
-backup_job_name = "payerappc03-daily"
+backup_job_name = ""
 backup_scope = "FULL_CLUSTER"
 storage_location = "bauerbo-azure-blob"
 excluded_namespaces = ["kube-system","vmware-system-tmc","default"]
