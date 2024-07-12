@@ -3,7 +3,7 @@ provisioner_name = "payer-ns"                              // vSphere Namespace 
 
 // Global Cluster Configuration
 
-cluster_name = "payerapp"                              // TKG workload cluster name
+cluster_name = "payerapp"                              // Random number will be appended to clustername root
 cluster_group = "payer-apps"                          // TMC Cluster Group to place cluster
 pod_cidr_blocks = "100.96.0.0/11"                      // Subnet to use for Pods per cluster
 service_cidr_blocks = "100.64.0.0/13"                   // Subnet to use for service per cluster

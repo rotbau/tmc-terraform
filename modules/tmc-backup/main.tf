@@ -1,5 +1,5 @@
 resource "tanzu-mission-control_backup_schedule" "sample-full" {
-  name = "${var.cluster_name}-schedule"
+  name = "${var.cluster_name}-daily"
   scope {
     cluster {
       management_cluster_name = var.management_cluster_name

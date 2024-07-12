@@ -147,8 +147,6 @@ variable "nodepool1_vm_class" {
   type        = string
 }
 
-// TMC Backup Schedule Variables
-
 variable "backup_job_name" {
   description = "Name for Job"
   type        = string
