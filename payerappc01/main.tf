@@ -31,6 +31,7 @@ variable "clusterlist" {
 }
 
 resource "random_integer" "ri" {
+  for_each = var.clusterlist
   min = 1000
   max = 9999
 }
@@ -71,6 +72,7 @@ module "tkgs_cluster" {
 }
 
 module "tmc_backup_schedule" {
+    for_each = var.clusterlist
   source = "../modules/tmc-backup"
 
   vmw_cloud_api_token = var.vmw_cloud_api_token
