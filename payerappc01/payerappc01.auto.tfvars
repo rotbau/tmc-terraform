@@ -25,7 +25,7 @@ control_plane_os_arch = "amd64"
 
 nodepool1_name = "md-0"
 nodepool1_description = "np1"
-nodepool1_worker_replicas = "3"
+nodepool1_worker_replicas = "2"
 nodepool1_worker_class = "node-pool"
 nodepool1_os_name = "ubuntu"
 nodepool1_os_version = "22.04"
