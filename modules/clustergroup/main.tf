@@ -102,7 +102,6 @@ resource "tanzu-mission-control_kustomization" "create_cluster_group_kustomizati
 }
 # Create Tanzu Mission Control cluster group scope helm feature with attached set as default value.
 resource "tanzu-mission-control_helm_feature" "create_cg_helm_feature" {
-  depends_on = [ tanzu-mission-control_kustomization.create_cluster_group_kustomization ]
   scope {
     cluster_group {
       name = var.cluster_group # Required
