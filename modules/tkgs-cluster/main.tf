@@ -112,3 +112,8 @@ resource "tanzu-mission-control_tanzu_kubernetes_cluster" "tkgs_cluster" {
     fail_on_timeout     = true
   }    
 }
+
+output "tkg-cluster-name" {
+  value = tanzu-mission-control_tanzu_kubernetes_cluster.tkgs_cluster.name
+  
+}
