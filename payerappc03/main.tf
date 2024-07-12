@@ -52,5 +52,5 @@ module "tmc_backup_schedule" {
 }
 
 output "cluster_name" {
- value = module.tkgs_cluster.cluster.name
+ value = module.tkgs_cluster.cluster_name
 }
