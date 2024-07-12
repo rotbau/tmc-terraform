@@ -3,7 +3,7 @@ provisioner_name = "payer-ns"                              // vSphere Namespace 
 
 // Global Cluster Configuration
 
-cluster_name = "payerappc02-tf"                              // TKG workload cluster name
+cluster_name = "payerapp"                              // Random number will be appended to clustername root
 cluster_group = "payer-apps"                          // TMC Cluster Group to place cluster
 pod_cidr_blocks = "100.96.0.0/11"                      // Subnet to use for Pods per cluster
 service_cidr_blocks = "100.64.0.0/13"                   // Subnet to use for service per cluster
@@ -25,7 +25,7 @@ control_plane_os_arch = "amd64"
 
 nodepool1_name = "md-0"
 nodepool1_description = "np1"
-nodepool1_worker_replicas = "3"
+nodepool1_worker_replicas = "2"
 nodepool1_worker_class = "node-pool"
 nodepool1_os_name = "ubuntu"
 nodepool1_os_version = "22.04"
@@ -37,7 +37,7 @@ nodepool1_vm_class = "best-effort-medium"
 
 // Backup Job Configuration
 
-backup_job_name = "payerappc02-daily"
+backup_job_name = ""
 backup_scope = "FULL_CLUSTER"
 storage_location = "bauerbo-azure-blob"
 excluded_namespaces = ["kube-system","vmware-system-tmc","default"]
