@@ -10,7 +10,7 @@ module "tkgs_cluster" {
   vmw_tmc_endpoint = var.vmw_tmc_endpoint
   management_cluster_name = var.management_cluster_name
   provisioner_name = var.provisioner_name
-  cluster_name = "$var.cluster_name-${random_integer.ri.result}"
+  cluster_name = "${var.cluster_name}-${random_integer.ri.result}"
   cluster_group = var.cluster_group
   pod_cidr_blocks = var.pod_cidr_blocks
   service_cidr_blocks = var.service_cidr_blocks
