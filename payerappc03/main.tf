@@ -52,5 +52,5 @@ module "tmc_backup_schedule" {
 }
 
 output "cluster_name" {
- value = module.tkgs_cluster.cluster_name
+ value = module.tkgs_cluster.tanzu-mission-control_tanzu_kubernetes_cluster.tkgs_cluster.name
 }
