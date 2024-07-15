@@ -42,9 +42,7 @@ locals {
 //        "storageClass" : var.cluster_storageclasses
 //      }
 //    ],
-    "ntp" : [
-      "${var.cluster_ntp}"
-    ],
+    "ntp" : var.cluster_ntp,
     "storageClass" : var.cluster_storageclasses,
     "storageClasses" : [
       "${var.cluster_storageclasses}"
