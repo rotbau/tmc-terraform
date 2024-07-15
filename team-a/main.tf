@@ -8,7 +8,7 @@ module "tkgs_cluster" {
   for_each = var.clusterlist
   source = "../modules/tkgs-cluster"
   providers = { 
-    source = tanzu-mission-control
+    tanzu-mission-control = tanzu-mission-control
   }
 
   vmw_cloud_api_token = var.vmw_cloud_api_token
