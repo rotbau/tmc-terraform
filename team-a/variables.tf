@@ -203,7 +203,7 @@ variable "excluded_namespaces" {
   type        = list(string)
 }
 
-variable "tkgs_cluster_name" {
+variable "tkg_cluster_name" {
   description = ""
   type = string
 }
