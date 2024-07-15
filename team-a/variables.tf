@@ -56,10 +56,10 @@ variable "provisioner_name" {
   type        = string
 }
 
-#variable "cluster_name" {
-#  description = "Name of TKG cluster"
-#  type        = string
-#}
+variable "cluster_name" {
+  description = "Name of TKG cluster"
+  type        = string
+}
 
 variable "cluster_group" {
   description = "TMC cluster group name"

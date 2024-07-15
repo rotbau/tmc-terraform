@@ -48,7 +48,7 @@ module "tmc_backup_schedule" {
   vmw_tmc_endpoint = var.vmw_tmc_endpoint
   management_cluster_name = var.management_cluster_name
   provisioner_name = var.provisioner_name
-  cluster_name = "${v.cluster-name}"
+  cluster_name = var.cluster_name[each.value]
   backup_job_name = var.backup_job_name
   backup_scope = var.backup_scope
   storage_location = var.storage_location
