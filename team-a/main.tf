@@ -1,5 +1,5 @@
 resource "random_integer" "ri" {
-  for_each = var.clusterlist
+#  for_each = var.clusterlist
   min = 1000
   max = 9999
 }
@@ -13,7 +13,7 @@ module "tkgs_cluster" {
   vmw_tmc_endpoint = var.vmw_tmc_endpoint
   management_cluster_name = var.management_cluster_name
   provisioner_name = var.provisioner_name
-  cluster_name = "${each.value.name_prefix}-${random_integer.ri[each.key]}"
+  cluster_name = "${each.value.name_prefix}-${random_integer.ri.result}"
   cluster_group = var.cluster_group
   pod_cidr_blocks = var.pod_cidr_blocks
   service_cidr_blocks = var.service_cidr_blocks
