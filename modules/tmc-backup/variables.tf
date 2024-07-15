@@ -24,7 +24,7 @@ variable "provisioner_name" {
 
 variable "cluster_name" {
   description = "Name of TKG cluster"
-  type        = string
+  type        = map(string)
 }
 variable "backup_job_name" {
   description = "Name for Job"
