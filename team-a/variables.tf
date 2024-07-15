@@ -203,7 +203,7 @@ variable "excluded_namespaces" {
   type        = list(string)
 }
 
-#variable "tkgs_cluster_name" {
-#  description = ""
-#  type = map(string)
-#}
+variable "tkgs_cluster_name" {
+  description = ""
+  type = string
+}
