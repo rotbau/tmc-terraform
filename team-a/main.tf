@@ -41,7 +41,7 @@ module "tkgs_cluster" {
 }
 
 module "tmc_backup_schedule" {
-  for_each = var.clusterlist
+  for_each = var.tkgs_cluster_name 
   source = "../modules/tmc-backup"
 
   vmw_cloud_api_token = var.vmw_cloud_api_token

@@ -202,3 +202,8 @@ variable "excluded_namespaces" {
   description = "Namespace to skip on backup"
   type        = list(string)
 }
+
+variable "tkgs_cluster_name" {
+  description = ""
+  type = map(string)
+}
