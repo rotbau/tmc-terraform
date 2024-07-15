@@ -123,6 +123,8 @@ resource "tanzu-mission-control_tanzu_kubernetes_cluster" "tkgs_cluster" {
 }
 
 output "tkg-cluster-name" {
-  value = tanzu-mission-control_tanzu_kubernetes_cluster.tkgs_cluster.default
-  
+  value = [
+    for k, v in module.tkgs-cluster:
+    v.cluster_name
+  ]
 }
