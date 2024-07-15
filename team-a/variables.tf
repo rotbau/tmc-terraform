@@ -2,7 +2,7 @@
 
 variable "clusterlist" {
   description = "List of clusters to create"
-  type = map(any)
+  type = map(string)
 
   default = {
     dev-cluster = {
