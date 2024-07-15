@@ -123,5 +123,8 @@ resource "tanzu-mission-control_tanzu_kubernetes_cluster" "tkgs_cluster" {
 }
 
 output "tkg_cluster_name" {
-  value = tanzu-mission-control_tanzu_kubernetes_cluster.tkgs_cluster.name
+  value = [
+    for key, value in tanzutanzu-mission-control_tanzu_kubernetes_cluster.tkgs_cluster : value.name
+  
+  ]
 }
