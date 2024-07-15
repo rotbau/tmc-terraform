@@ -56,10 +56,10 @@ variable "provisioner_name" {
   type        = string
 }
 
-variable "cluster_name" {
-  description = "Name of TKG cluster"
-  type        = string
-}
+#variable "cluster_name" {
+#  description = "Name of TKG cluster"
+#  type        = string
+#}
 
 variable "cluster_group" {
   description = "TMC cluster group name"
@@ -76,10 +76,10 @@ variable "service_cidr_blocks" {
   type        = string
 }
 
-variable "tkr_version" {
-  description = "TKR cluster version"
-  type        = string
-}
+#variable "tkr_version" {
+#  description = "TKR cluster version"
+#  type        = string
+#}
 
 variable "cluster_ntp" {
   description = "override default NTP per cluster"
@@ -101,15 +101,15 @@ variable "cluster_storageclasses" {
   type        = string
 }
 
-variable "cluster_vm_class" {
-  description = "VM size for cluster VM - nodepool can override below"
-  type        = string
-}
+#variable "cluster_vm_class" {
+#  description = "VM size for cluster VM - nodepool can override below"
+#  type        = string
+#}
 
-variable "control_plane_replicas" {
-  description = "1 or 3"
-  type        = number
-}
+#variable "control_plane_replicas" {
+#  description = "1 or 3"
+#  type        = number
+#}
 
 variable "control_plane_os_name" {
   description = "ubuntu or photon"
@@ -136,10 +136,10 @@ variable "nodepool1_description" {
   type        = string
 }
 
-variable "nodepool1_worker_replicas" {
-  description = "Number of worker nodes"
-  type        = number
-}
+#variable "nodepool1_worker_replicas" {
+#  description = "Number of worker nodes"
+#  type        = number
+#}
 
 variable "nodepool1_worker_class" {
   description = "node-pool only supported value"
@@ -176,10 +176,10 @@ variable "nodepool1_storageclass" {
   type        = string
 }
 
-variable "nodepool1_vm_class" {
-  description = "VM size for nodepool 1 nodes"
-  type        = string
-}
+#variable "nodepool1_vm_class" {
+#  description = "VM size for nodepool 1 nodes"
+#  type        = string
+#}
 
 // TMC Backup Schedule Variables
 
