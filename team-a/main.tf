@@ -41,14 +41,14 @@ module "tkgs_cluster" {
 }
 
 module "tmc_backup_schedule" {
-    for_each = var.clusterlist
+  for_each = var.clusterlist
   source = "../modules/tmc-backup"
 
   vmw_cloud_api_token = var.vmw_cloud_api_token
   vmw_tmc_endpoint = var.vmw_tmc_endpoint
   management_cluster_name = var.management_cluster_name
   provisioner_name = var.provisioner_name
-  cluster_name = "${module.tkgs_cluster.tkg-cluster-name[0]}"
+  cluster_name = "${module.tkgs_cluster.tkg-cluster-name}"
   backup_job_name = var.backup_job_name
   backup_scope = var.backup_scope
   storage_location = var.storage_location
