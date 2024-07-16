@@ -11,7 +11,7 @@ variable "clusterlist" {
       cp_replicas = 1
       cp_vm_class = "best-effort-small"      
       np1_replicas = 2
-      np1_vm_class = "best-effort-medium"
+      np1_vm_class = "best-effort-large"
     }
     stage-cluster = {
       name_prefix = "teama-stage"
@@ -19,7 +19,7 @@ variable "clusterlist" {
       cp_replicas = 1
       cp_vm_class = "best-effort-small"      
       np1_replicas = 2
-      np1_vm_class = "best-effort-medium"
+      np1_vm_class = "best-effort-large"
     }
     prod-cluster = {
       name_prefix = "teama-prod"
@@ -27,7 +27,7 @@ variable "clusterlist" {
       cp_replicas = 1
       cp_vm_class = "best-effort-small"      
       np1_replicas = 2
-      np1_vm_class = "best-effort-medium"
+      np1_vm_class = "best-effort-large"
     }
   }
 }
