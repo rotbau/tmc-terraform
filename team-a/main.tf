@@ -6,6 +6,7 @@ resource "random_integer" "ri" {
 
 module "tkgs_cluster" {
   for_each = var.clusterlist
+  depends_on = [ module.clustergroup ]
   source = "../modules/tkgs-cluster"
   
   vmw_cloud_api_token = var.vmw_cloud_api_token
@@ -38,10 +39,13 @@ module "tkgs_cluster" {
   nodepool1_storageclass = var.nodepool1_storageclass
   nodepool1_vm_class = each.value.np1_vm_class
 }
+resource "time_sleep" "wait_60_seconds" {
+  create_duration = "60s"
+}
 
 module "tmc_backup_schedule" {
   for_each = var.clusterlist
-  depends_on = [ module.tkgs_cluster ]
+  depends_on = [time_sleep.wait_60_seconds]
   source = "../modules/tmc-backup"
 
   vmw_cloud_api_token = var.vmw_cloud_api_token
