@@ -32,7 +32,7 @@ provisioner_name = "teama-ns"                              // vSphere Namespace 
 
 pod_cidr_blocks = "100.96.0.0/11"                      // Subnet to use for Pods per cluster
 service_cidr_blocks = "100.64.0.0/13"                   // Subnet to use for service per cluster
-cluster_ntp = ["time1.oc.vmware.com,time2.oc.vmware.com"]
+cluster_ntp = "time1.oc.vmware.com,time2.oc.vmware.com"
 cluster_storageclass = "vc01cl01-t0compute"
 cluster_storageclasses = "vc01cl01-t0compute"
 cluster_trusted_ca1 = ""
