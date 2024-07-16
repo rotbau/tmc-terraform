@@ -2,7 +2,7 @@
 ### Set additional cluster configuration in clusterlist.tf file
 ######
 
-// Cluster Group Configuration
+// TMC Cluster Group Configuration
 
 cluster_group = "team-a"
 cluster_group_description = "team-a application cluster group"
