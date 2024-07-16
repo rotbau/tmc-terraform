@@ -18,7 +18,7 @@ module "tkgs_cluster" {
   pod_cidr_blocks = var.pod_cidr_blocks
   service_cidr_blocks = var.service_cidr_blocks
   tkr_version = each.value.tkr_version
-  cluster_ntp = jsonencode(var.cluster_ntp)
+  cluster_ntp = var.cluster_ntp
   cluster_storageclass = var.cluster_storageclass
   cluster_storageclasses = var.cluster_storageclasses
   cluster_vm_class = each.value.cp_vm_class
