@@ -25,6 +25,9 @@ resource "tanzu-mission-control_cluster_group" "create_cluster_group" {
     description = "Create cluster group through terraform"
     labels = var.cluster_group_labels
   }
+  lifecycle {
+    ignore_changes = all
+  }
 }
 
 # Create Tanzu Mission Control cluster group scope helm feature with attached set as default value.
@@ -35,10 +38,12 @@ resource "tanzu-mission-control_helm_feature" "create_cg_helm_feature" {
       name = var.cluster_group
     }
   }
-
   meta {
     description = "Helm enabled by Terraform"
     labels      = { "helm" : "enabled" }
+  }
+  lifecycle {
+    ignore_changes = all
   }
 }
 
