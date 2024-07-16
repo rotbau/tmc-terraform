@@ -1,9 +1,35 @@
+######
+### Set additional cluster configuration in clusterlist.tf file
+######
+
+// Cluster Group Configuration
+
+cluster_group = "team-a"
+cluster_group_description = "team-a application cluster group"
+cluster_group_labels = {
+    app = "teama"
+    type = "app"
+}
+git_repo_name = "flux-addons-repo"
+git_repo_namespace = "tanzu-continuousdelivery-resources"
+git_url = "https://github.com/rotbau/tmc-terraform.git"
+git_secret_ref = ""
+git_sync_interval = "5m"
+git_branch = "main"
+kustomization_name = "cluster-addons"
+kustomization_namespace = "tanzu-continuousdelivery-resources"
+kustomization_start_path = "/addons/base/start/"
+kustomization_prune = "true"
+kustomization_sync_interval = "5m0s"
+
+// Supervisor Configuration
+
 management_cluster_name = "h2o-4-24734"       // Management cluster name from TMC
-provisioner_name = "payer-ns"                              // vSphere Namespace to provison cluster in
+provisioner_name = "teama-ns"                              // vSphere Namespace to provison cluster in
+
 
 // Global Cluster Configuration
 
-cluster_group = "payer-apps"                          // TMC Cluster Group to place cluster
 pod_cidr_blocks = "100.96.0.0/11"                      // Subnet to use for Pods per cluster
 service_cidr_blocks = "100.64.0.0/13"                   // Subnet to use for service per cluster
 cluster_ntp = ["time1.oc.vmware.com,time2.oc.vmware.com"]
