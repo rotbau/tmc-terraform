@@ -42,7 +42,8 @@ locals {
 //        "storageClass" : var.cluster_storageclasses
 //      }
 //    ],
-    "ntp" : jsonencode(var.cluster_ntp),
+//    "ntp" : jsonencode(var.cluster_ntp),
+    "ntp" : ["${join(",", var.cluster_ntp)}"]
     "storageClass" : var.cluster_storageclasses,
     "storageClasses" : [
       "${var.cluster_storageclasses}"

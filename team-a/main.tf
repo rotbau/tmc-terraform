@@ -40,6 +40,7 @@ module "tkgs_cluster" {
   nodepool1_vm_class = each.value.np1_vm_class
 }
 resource "time_sleep" "wait_60_seconds" {
+  depends_on = [ module.tkgs_cluster ]
   create_duration = "60s"
 }
 
