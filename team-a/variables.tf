@@ -49,7 +49,7 @@ variable "service_cidr_blocks" {
 
 variable "cluster_ntp" {
   description = "override default NTP per cluster"
-  type        = list(string)
+  type        = string
 }
 
 variable "cluster_trusted_ca1" {
