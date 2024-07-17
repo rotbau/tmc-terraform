@@ -7,7 +7,7 @@ terraform {
   }
 }
 
-resource "tanzu-mission-control_backup_schedule" "sample-full" {
+resource "tanzu-mission-control_backup_schedule" "cluster-full-backup" {
   name = "${var.cluster_name}-daily"
   scope {
     cluster {
