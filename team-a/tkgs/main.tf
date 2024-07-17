@@ -40,7 +40,7 @@ module "tkgs_cluster" {
 }
 resource "time_sleep" "wait_5_mins" {
   depends_on = [ module.tkgs_cluster ]
-  create_duration = "5m0s"
+  create_duration = "5m"
 }
 
 module "tmc_backup_schedule" {
