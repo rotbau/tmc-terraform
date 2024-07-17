@@ -20,3 +20,22 @@ node_count = each.value.node_count
 vm_size = each.value.vm_size
 cluster_group = var.cluster_group
 }
+
+resource "time_sleep" "wait_5_mins" {
+  depends_on = [ module.tkgs_cluster ]
+  create_duration = "5m"
+}
+
+module "tmc_backup_schedule" {
+  for_each = var.clusterlist
+  depends_on = [time_sleep.wait_5_mins]
+  source = "../../modules/tmc-backup"
+
+  vmw_cloud_api_token = var.vmw_cloud_api_token
+  vmw_tmc_endpoint = var.vmw_tmc_endpoint
+  cluster_name = module.aks_cluster[each.key].aks_clustername
+  backup_job_name = var.backup_job_name
+  backup_scope = var.backup_scope
+  storage_location = var.storage_location
+  excluded_namespaces = var.excluded_namespaces
+}

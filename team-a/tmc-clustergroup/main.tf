@@ -1,5 +1,5 @@
 module "clustergroup" {
-  source = "../../modules/clustergroup"
+  source = "../../modules/tmc-clustergroup"
 
   vmw_cloud_api_token = var.vmw_cloud_api_token
   vmw_tmc_endpoint = var.vmw_tmc_endpoint
