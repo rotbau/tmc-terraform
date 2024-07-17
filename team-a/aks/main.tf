@@ -22,7 +22,7 @@ cluster_group = var.cluster_group
 }
 
 resource "time_sleep" "wait_5_mins" {
-  depends_on = [ module.tkgs_cluster ]
+  depends_on = [module.aks_cluster ]
   create_duration = "5m"
 }
 
