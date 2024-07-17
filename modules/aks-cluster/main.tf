@@ -50,5 +50,5 @@ output "kubeConfig" {
 }
 
 output "aks_cluster_name" {
-  value = tanzu-mission-control_tanzu_kubernetes_cluster.AKS_cluster.name
+  value = tanzu-mission-control_akscluster.AKS_cluster.name
 }
