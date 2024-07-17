@@ -38,14 +38,14 @@ module "tkgs_cluster" {
   nodepool1_storageclass = var.nodepool1_storageclass
   nodepool1_vm_class = each.value.np1_vm_class
 }
-resource "time_sleep" "wait_60_seconds" {
+resource "time_sleep" "wait_5_mins" {
   depends_on = [ module.tkgs_cluster ]
-  create_duration = "60s"
+  create_duration = "5m0s"
 }
 
 module "tmc_backup_schedule" {
   for_each = var.clusterlist
-  depends_on = [time_sleep.wait_60_seconds]
+  depends_on = [time_sleep.wait_5_mins]
   source = "../../modules/tmc-backup"
 
   vmw_cloud_api_token = var.vmw_cloud_api_token
