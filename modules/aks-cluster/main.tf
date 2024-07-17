@@ -46,5 +46,5 @@ resource "tanzu-mission-control_akscluster" "AKS_cluster" {
 }
 
 output "kubeConfig" {
-  value = tanzu-mission-control_akscluster.AKS_cluster.k8s.kube_config_raw
+  value = tanzu-mission-control_akscluster.AKS_cluster.kube_config_raw
 }
