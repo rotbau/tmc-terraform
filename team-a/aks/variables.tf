@@ -23,27 +23,27 @@ variable "resource_group" {
   type        = string
 }
 
-variable "aks_clustername" {
-  description = "aks cluster name"
-  type        = string
-}
+#variable "aks_clustername" {
+#  description = "aks cluster name"
+#  type        = string
+#}
 
-variable "location" {
-  description = "cluster location"
-  type        = string
-}
+#variable "location" {
+#  description = "cluster location"
+#  type        = string
+#}
 
-variable "k8s_version" {
-  description = "k8s version"
-  type        = string
-}
+#variable "k8s_version" {
+#  description = "k8s version"
+#  type        = string
+#}
 
-variable "node_count" {
-  description = "node count"
-  type        = number
-}
+#variable "node_count" {
+#  description = "node count"
+#  type        = number
+#}
 
-variable "vm_size" {
-  description = "az vm size"
-  type        = string
-}
+#variable "vm_size" {
+#  description = "az vm size"
+#  type        = string
+#}
