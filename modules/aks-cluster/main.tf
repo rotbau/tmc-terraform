@@ -11,7 +11,7 @@ terraform {
 
 //variable "SESSION_NAMESPACE" {}
 
-resource "tanzu-mission-control_akscluster" "demo_AKS_cluster" {
+resource "tanzu-mission-control_akscluster" "AKS_cluster" {
   credential_name = var.credential_name
   subscription_id = var.azure_subscription_id
   resource_group  = var.resource_group
@@ -46,5 +46,5 @@ resource "tanzu-mission-control_akscluster" "demo_AKS_cluster" {
 }
 
 output "kubeConfig" {
-  value = "${azurerm_kubernetes_cluster.k8s.kube_config_raw}"
+  value = tanzu-mission-control_akscluster.AKS_cluster.k8s.kube_config_raw
 }

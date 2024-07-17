@@ -6,7 +6,6 @@ resource "random_integer" "ri" {
 
 module "tkgs_cluster" {
   for_each = var.clusterlist
-  depends_on = [ module.clustergroup ]
   source = "../../modules/tkgs-cluster"
   
   vmw_cloud_api_token = var.vmw_cloud_api_token
