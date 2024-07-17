@@ -6,7 +6,7 @@ variable "clusterlist" {
 
   default = {
     dev-cluster = {
-      name_prefix = "teama-dev"
+      name_prefix = "teama-aks-dev"
       location = "westus2"
       resource_group = "bauerbo"
       k8s_version = "1.28.9"
@@ -14,7 +14,7 @@ variable "clusterlist" {
       vm_size = "Standard_DS3_v2"
     }
     stage-cluster = {
-      name_prefix = "teama-dev"
+      name_prefix = "teama-aks-stage"
       location = "southcentralus"
       resource_group = "bauerbo"      
       k8s_version = "1.28.9"
@@ -22,7 +22,7 @@ variable "clusterlist" {
       vm_size = "Standard_DS3_v2"
     }
     prod-cluster = {
-      name_prefix = "teama-dev"
+      name_prefix = "teama-aks-prod"
       location = "eastus2"
       resource_group = "bauerbo"      
       k8s_version = "1.28.9"
