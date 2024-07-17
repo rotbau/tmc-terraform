@@ -7,7 +7,7 @@ resource "random_integer" "ri" {
 module "tkgs_cluster" {
   for_each = var.clusterlist
   depends_on = [ module.clustergroup ]
-  source = "../modules/tkgs-cluster"
+  source = "../../modules/tkgs-cluster"
   
   vmw_cloud_api_token = var.vmw_cloud_api_token
   vmw_tmc_endpoint = var.vmw_tmc_endpoint
@@ -47,7 +47,7 @@ resource "time_sleep" "wait_60_seconds" {
 module "tmc_backup_schedule" {
   for_each = var.clusterlist
   depends_on = [time_sleep.wait_60_seconds]
-  source = "../modules/tmc-backup"
+  source = "../../modules/tmc-backup"
 
   vmw_cloud_api_token = var.vmw_cloud_api_token
   vmw_tmc_endpoint = var.vmw_tmc_endpoint
