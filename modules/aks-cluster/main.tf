@@ -18,12 +18,6 @@ provider "tanzu-mission-control" {
 
 //variable "SESSION_NAMESPACE" {}
 
-
-terraform {
-  backend "local" {
-    path = "./terraform.tfstate"
-  }
-}
 resource "tanzu-mission-control_akscluster" "demo_AKS_cluster" {
   credential_name = var.credential_name
   subscription_id = var.azure_subscription_id
