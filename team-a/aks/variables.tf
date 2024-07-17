@@ -18,10 +18,10 @@ variable "azure_subscription_id" {
   type        = string
 }
 
-variable "resource_group" {
-  description = "azure resource group for cluster"
-  type        = string
-}
+#variable "resource_group" {
+#  description = "azure resource group for cluster"
+#  type        = string
+#}
 
 #variable "aks_clustername" {
 #  description = "aks cluster name"
