@@ -46,7 +46,7 @@ resource "time_sleep" "wait_5_mins" {
 module "tmc_backup_schedule" {
   for_each = var.clusterlist
   depends_on = [time_sleep.wait_5_mins]
-  source = "../../modules/tmc-backup"
+  source = "../../modules/tmc-backup-schedule"
 
   vmw_cloud_api_token = var.vmw_cloud_api_token
   vmw_tmc_endpoint = var.vmw_tmc_endpoint
