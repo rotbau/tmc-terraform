@@ -24,8 +24,8 @@ kustomization_sync_interval = "5m0s"
 
 // Supervisor Configuration
 
-management_cluster_name = "h2o-4-24734"       // Management cluster name from TMC
-provisioner_name = "teama-ns"                              // vSphere Namespace to provison cluster in
+management_cluster_name = "h2o-4-24734"       // Management cluster name from TMC (value for cloud is aks or eks)
+provisioner_name = "teama-ns"                 // vSphere Namespace to provison cluster in (value for cloud is aks or eks)
 
 
 // Global Cluster Configuration

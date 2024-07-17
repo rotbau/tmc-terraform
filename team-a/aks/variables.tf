@@ -74,3 +74,13 @@ variable "excluded_namespaces" {
   description = "Namespace to skip on backup"
   type        = list(string)
 }
+
+variable "management_cluster_name" {
+  description = "TKG management cluster name in TMC (cloud is aks or eks)"
+  type        = string
+}
+
+variable "provisioner_name" {
+  description = "vSphere Namespace to provison cluster to(cloud is aks or eks)"
+  type        = string
+}
