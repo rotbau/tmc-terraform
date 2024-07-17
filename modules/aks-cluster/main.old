@@ -20,18 +20,12 @@ resource "tanzu-mission-control_akscluster" "demo_AKS_cluster" {
     description = "aks test cluster"
     labels      = { "key1" : "value1" }
   }
-  wait_for_kubeconfig = true
   spec {
-    cluster_group = var.cluster_group
     config {
-      location = var.location
+      location           = var.location
       kubernetes_version = var.k8s_version
       network_config {
-        dns_prefix = var.aks_clustername
-      }
-      storage_config {
-        enable_disk_csi_driver = true
-        enable_file_csi_driver = false
+        dns_prefix = "dns-tf-test"
       }
     }
     nodepool {
@@ -43,8 +37,4 @@ resource "tanzu-mission-control_akscluster" "demo_AKS_cluster" {
       }
     }
   }
-}
-
-output "kubeConfig" {
-  value = "${azurerm_kubernetes_cluster.k8s.kube_config_raw}"
 }

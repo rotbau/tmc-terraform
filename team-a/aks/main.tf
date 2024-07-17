@@ -18,4 +18,5 @@ location = each.value.location
 k8s_version = each.value.k8s_version
 node_count = each.value.node_count
 vm_size = each.value.vm_size
+cluster_group = var.cluster_group
 }

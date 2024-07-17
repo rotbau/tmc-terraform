@@ -47,3 +47,8 @@ variable "vm_size" {
   description = "az vm size"
   type        = string
 }
+
+variable "cluster_group" {
+  description = "TMC clustergroup to add cluster to"
+  type        = string
+}

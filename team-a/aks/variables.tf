@@ -18,6 +18,11 @@ variable "azure_subscription_id" {
   type        = string
 }
 
+variable "cluster_group" {
+  description = "TMC clustergroup to add cluster to"
+  type        = string
+}
+
 #variable "resource_group" {
 #  description = "azure resource group for cluster"
 #  type        = string
