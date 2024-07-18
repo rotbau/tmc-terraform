@@ -71,7 +71,7 @@ resource "tanzu-mission-control_tanzu_kubernetes_cluster" "tkgs_cluster" {
 
   meta {
     description = "description of the cluster"
-    labels      = { "key" : "changedvalues" }
+    labels      = var.labels
   }
   spec {
     cluster_group_name = var.cluster_group
