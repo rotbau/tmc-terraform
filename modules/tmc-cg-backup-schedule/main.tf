@@ -15,9 +15,11 @@ resource "tanzu-mission-control_backup_schedule" "clustergroup-scoped-full" {
     }
   }
   selector {
-    names = [
-      "team-a*"
-    ]
+   label_selector {
+    match_labels = {
+     backup = "true"
+    }
+   }
   }
 
   backup_scope = "FULL_CLUSTER"
