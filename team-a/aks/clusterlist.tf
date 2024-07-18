@@ -14,7 +14,7 @@ variable "clusterlist" {
       vm_size = "Standard_DS3_v2"
       backup_enabled = "false"
       cluster_type = "aks"
-      owner = var.cluster_group 
+      owner = "teama"
     }
     stage-cluster = {
       name_prefix = "teama-aks-stage"
@@ -25,7 +25,7 @@ variable "clusterlist" {
       vm_size = "Standard_DS3_v2"
       backup_enabled = "true"
       cluster_type = "aks"
-      owner = var.cluster_group 
+      owner = "teama" 
     }
     prod-cluster = {
       name_prefix = "teama-aks-prod"
@@ -36,7 +36,7 @@ variable "clusterlist" {
       vm_size = "Standard_DS3_v2"
       backup_enabled = "true"
       cluster_type = "aks"
-      owner = var.cluster_group 
+      owner = "teama" 
     }
   }
 }
