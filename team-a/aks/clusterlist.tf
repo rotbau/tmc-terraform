@@ -40,11 +40,3 @@ variable "clusterlist" {
     }
   }
 }
-
-variable "clusterlabels" {
-  type = "map"
-  default = {
-    type = "aks"
-    backup = "enabled"
-  }
-}
