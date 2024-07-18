@@ -18,3 +18,17 @@ module "clustergroup" {
   kustomization_prune = var.kustomization_prune
   kustomization_sync_interval = var.kustomization_sync_interval
 }
+
+module "clustergroup-backup-schedule" {
+  depends_on = [ module.clustergroup ]
+  source = "../../modules/tmc-cg-backup-schedule"
+
+  vmw_cloud_api_token = var.vmw_cloud_api_token
+  vmw_tmc_endpoint = var.vmw_tmc_endpoint
+  cluster_group = var.cluster_group
+  backup_job_name = var.backup_job_name
+  backup_scope = var.backup_scope
+  storage_location = var.storage_location
+  excluded_namespaces = var.excluded_namespaces
+  excluded_resources = var.excluded_resources
+}
