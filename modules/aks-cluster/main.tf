@@ -18,7 +18,7 @@ resource "tanzu-mission-control_akscluster" "AKS_cluster" {
   name            = var.aks_clustername
   meta {
     description = "aks test cluster"
-    labels      = var.labels
+    labels      = "${var.labels}"
   }
   wait_for_kubeconfig = true
   spec {
