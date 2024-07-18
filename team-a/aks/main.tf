@@ -29,7 +29,7 @@ cluster_group = var.cluster_group
 #module "tmc_backup_schedule" {
 #  for_each = var.clusterlist
 #  depends_on = [time_sleep.wait_5_mins]
-#  source = "../../modules/tmc-backup-schedule"
+#  source = "../../modules/tmc-cl-backup-schedule"
 
 #  vmw_cloud_api_token = var.vmw_cloud_api_token
 #  vmw_tmc_endpoint = var.vmw_tmc_endpoint
