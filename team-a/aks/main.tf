@@ -20,9 +20,9 @@ node_count = each.value.node_count
 vm_size = each.value.vm_size
 cluster_group = var.cluster_group
 labels = merge (var.labels, {
-  "type" = each.value.cluster_type
-  "backup" = each.value.backup_enabled
-  "owner" = each.value.owner
+  "type" = "${each.value.cluster_type}",
+  "backup" = "${each.value.backup_enabled}",
+  "owner" = "${each.value.owner}"
   })
 }
 
