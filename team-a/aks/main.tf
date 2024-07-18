@@ -21,23 +21,23 @@ vm_size = each.value.vm_size
 cluster_group = var.cluster_group
 }
 
-resource "time_sleep" "wait_5_mins" {
-  depends_on = [module.aks_cluster ]
-  create_duration = "5m"
-}
+#resource "time_sleep" "wait_5_mins" {
+#  depends_on = [module.aks_cluster ]
+#  create_duration = "5m"
+#}
 
-module "tmc_backup_schedule" {
-  for_each = var.clusterlist
-  depends_on = [time_sleep.wait_5_mins]
-  source = "../../modules/tmc-backup-schedule"
+#module "tmc_backup_schedule" {
+#  for_each = var.clusterlist
+#  depends_on = [time_sleep.wait_5_mins]
+#  source = "../../modules/tmc-backup-schedule"
 
-  vmw_cloud_api_token = var.vmw_cloud_api_token
-  vmw_tmc_endpoint = var.vmw_tmc_endpoint
-  management_cluster_name = var.management_cluster_name
-  provisioner_name = var.provisioner_name
-  cluster_name = module.aks_cluster[each.key]
-  backup_job_name = var.backup_job_name
-  backup_scope = var.backup_scope
-  storage_location = var.storage_location
-  excluded_namespaces = var.excluded_namespaces
-}
+#  vmw_cloud_api_token = var.vmw_cloud_api_token
+#  vmw_tmc_endpoint = var.vmw_tmc_endpoint
+#  management_cluster_name = var.management_cluster_name
+#  provisioner_name = var.provisioner_name
+#  cluster_name = module.aks_cluster[each.key]
+#  backup_job_name = var.backup_job_name
+#  backup_scope = var.backup_scope
+#  storage_location = var.storage_location
+#  excluded_namespaces = var.excluded_namespaces
+#}
