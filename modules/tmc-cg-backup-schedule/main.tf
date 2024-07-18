@@ -1,37 +1,28 @@
-resource "tanzu-mission-control_backup_schedule" "sample-full" {
-  name = "full-weekly"
+resource "tanzu-mission-control_backup_schedule" "clustergroup-scoped-full" {
+  name = "clustergroup-full-daily"
   scope {
     cluster_group {
-      cluster_group_name = "CG_NAME"
+      cluster_group_name = var.cluster_group
     }
   }
   selector {
     names = [
-      "cluster1",
-      "cluster2"
+      "*"
     ]
   }
 
   backup_scope = "FULL_CLUSTER"
   spec {
     schedule {
-      rate = "0 12 * * 1"
+      rate = "0 23 * * 1,2,3,4,5"
     }
 
     template {
       backup_ttl = "2592000s"
-      excluded_namespaces = [
-        "app-01",
-        "app-02",
-        "app-03",
-        "app-04"
-      ]
-      excluded_resources = [
-        "secrets",
-        "configmaps"
-      ]
+      excluded_namespaces = var.excluded_namespaces
+      excluded_resources = var.excluded_resources
 
-      storage_location = "TARGET_LOCATION_NAME"
+      storage_location = var.storage_location
     }
   }
 }

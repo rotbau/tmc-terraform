@@ -49,6 +49,11 @@ variable "excluded_namespaces" {
   type        = list(string)
 }
 
+variable "excluded_resources" {
+  description = "resources to skip on backup"
+  type        = list(string)
+}
+
 // Git Repo Variables
 
 variable "git_repo_name" {
