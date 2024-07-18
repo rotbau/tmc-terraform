@@ -17,9 +17,9 @@ resource "tanzu-mission-control_backup_schedule" "clustergroup-scoped-full" {
   selector {
    label_selector {
     match_expression {
-      key = backup
-      operator = in
-      values = true
+      key = "backup"
+      operator = "In"
+      values = ["true"]
     }
    }
   }
