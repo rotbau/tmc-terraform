@@ -52,3 +52,8 @@ variable "cluster_group" {
   description = "TMC clustergroup to add cluster to"
   type        = string
 }
+
+variable "labels" {
+  description = "TMC clustergroup to add cluster to"
+  type        = list(string)
+}

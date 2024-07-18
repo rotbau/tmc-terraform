@@ -12,6 +12,7 @@ variable "clusterlist" {
       k8s_version = "1.28.9"
       node_count = 1
       vm_size = "Standard_DS3_v2"
+      labels = ["foo:bar","bar:foo","backup:enabled"]
     }
     stage-cluster = {
       name_prefix = "teama-aks-stage"
@@ -20,6 +21,7 @@ variable "clusterlist" {
       k8s_version = "1.28.9"
       node_count = 1
       vm_size = "Standard_DS3_v2"
+      labels =""
     }
     prod-cluster = {
       name_prefix = "teama-aks-prod"
@@ -28,6 +30,7 @@ variable "clusterlist" {
       k8s_version = "1.28.9"
       node_count = 1
       vm_size = "Standard_DS3_v2"
+      labels = ""
     }
   }
 }

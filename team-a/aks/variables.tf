@@ -23,6 +23,12 @@ variable "cluster_group" {
   type        = string
 }
 
+variable "labels" {
+  description = "labels for clusters"
+  type        = list(string)
+  
+}
+
 #variable "resource_group" {
 #  description = "azure resource group for cluster"
 #  type        = string
