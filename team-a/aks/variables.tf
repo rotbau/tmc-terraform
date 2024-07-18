@@ -25,8 +25,8 @@ variable "cluster_group" {
 
 variable "labels" {
   description = "labels for clusters"
-  type        = string
-  
+  type        = map(string)
+  default = {}
 }
 
 #variable "resource_group" {
