@@ -12,6 +12,9 @@ variable "clusterlist" {
       cp_vm_class = "best-effort-small"      
       np1_replicas = 3
       np1_vm_class = "best-effort-large"
+      backup_enabled  = "false"
+      cluster_type    = "tkgs"
+      owner           = "teama"
     }
     stage-cluster = {
       name_prefix = "teama-stage"
@@ -20,6 +23,9 @@ variable "clusterlist" {
       cp_vm_class = "best-effort-small"      
       np1_replicas = 2
       np1_vm_class = "best-effort-large"
+      backup_enabled  = "true"
+      cluster_type    = "tkgs"
+      owner           = "teama"
     }
     prod-cluster = {
       name_prefix = "teama-prod"
@@ -28,6 +34,9 @@ variable "clusterlist" {
       cp_vm_class = "best-effort-small"      
       np1_replicas = 2
       np1_vm_class = "best-effort-large"
+      backup_enabled  = "true"
+      cluster_type    = "tkgs"
+      owner           = "teama"
     }
   }
 }

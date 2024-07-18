@@ -69,6 +69,10 @@ resource "tanzu-mission-control_tanzu_kubernetes_cluster" "tkgs_cluster" {
   management_cluster_name = var.management_cluster_name
   provisioner_name        = var.provisioner_name
 
+  meta {
+    description = "description of the cluster"
+    labels      = { "key" : "changedvalues" }
+  }
   spec {
     cluster_group_name = var.cluster_group
 

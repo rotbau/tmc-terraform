@@ -146,3 +146,9 @@ variable "nodepool1_vm_class" {
   description = "VM size for nodepool 1 nodes"
   type        = string
 }
+
+variable "labels" {
+  description = "labels for clusters"
+  type        = map(string)
+  default = {}
+}
