@@ -12,7 +12,9 @@ variable "clusterlist" {
       k8s_version = "1.28.9"
       node_count = 1
       vm_size = "Standard_DS3_v2"
-      labels = ["foo:bar","bar:foo","backup:enabled"]
+      backup_enabled = "false"
+      cluster_type = "aks"
+      owner = var.cluster_group 
     }
     stage-cluster = {
       name_prefix = "teama-aks-stage"
@@ -21,7 +23,9 @@ variable "clusterlist" {
       k8s_version = "1.28.9"
       node_count = 1
       vm_size = "Standard_DS3_v2"
-      labels =""
+      backup_enabled = "true"
+      cluster_type = "aks"
+      owner = var.cluster_group 
     }
     prod-cluster = {
       name_prefix = "teama-aks-prod"
@@ -30,7 +34,17 @@ variable "clusterlist" {
       k8s_version = "1.28.9"
       node_count = 1
       vm_size = "Standard_DS3_v2"
-      labels = ""
+      backup_enabled = "true"
+      cluster_type = "aks"
+      owner = var.cluster_group 
     }
+  }
+}
+
+variable "clusterlabels" {
+  type = "map"
+  default = {
+    type = "aks"
+    backup = "enabled"
   }
 }

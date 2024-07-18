@@ -25,7 +25,7 @@ variable "cluster_group" {
 
 variable "labels" {
   description = "labels for clusters"
-  type        = list(string)
+  type        = map(string)
   
 }
 
