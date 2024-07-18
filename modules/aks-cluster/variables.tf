@@ -54,6 +54,7 @@ variable "cluster_group" {
 }
 
 variable "labels" {
-  description = "TMC clustergroup to add cluster to"
-  type        = list(string)
+  description = "labels for clusters"
+  type        = map(string)
+  default = {}
 }
