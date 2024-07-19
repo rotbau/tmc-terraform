@@ -43,6 +43,13 @@ module "tkgs_cluster" {
     "owner" = "${each.value.owner}"
     })
 }
+
+#####
+# Below code is for cluster based back up.  
+# Uncomment time_sleep, module tmc_backup_scheldule
+# Set backup label to false in clusterlist.tf to exclude cluster from clustergroup based backups
+#####
+
 #resource "time_sleep" "wait_5_mins" {
 #  depends_on = [ module.tkgs_cluster ]
 #  create_duration = "5m"

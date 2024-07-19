@@ -26,6 +26,11 @@ labels = merge (var.labels, {
   })
 }
 
+#####
+# Below code is for cluster based back up.  
+# Doesn't working on AKS or EKS currently due to the way we name clusters
+#####
+
 #resource "time_sleep" "wait_5_mins" {
 #  depends_on = [module.aks_cluster ]
 #  create_duration = "5m"
