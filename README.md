@@ -12,7 +12,7 @@ This repo provides an example use the Tanzu Mission Control Terraform module.  T
 - Creates daily Velero backup schedules for each cluster in the cluster group based on cluster label match expression
 
 ## Repo Layout
-
+```
 ├── addons
 │   └── base                       <---- Flux/Kustomize code for addons.  Can add additional
 │       ├── argocd
@@ -56,7 +56,7 @@ This repo provides an example use the Tanzu Mission Control Terraform module.  T
         ├── provider.tf
         ├── team-a-tmc.auto.tfvars
         └── variables.tf
-    
+```    
 My implementation defines each directory under team-a as a workspace in Terrafrom.  However can be combined however you need.  Team-a folder can be replicated and adjusted for each team you need to manage infrastructure for.
 
 To-Do: Add EKS cluster creation
