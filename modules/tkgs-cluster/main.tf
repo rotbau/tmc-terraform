@@ -1,12 +1,3 @@
-terraform {
-  required_providers {
-    tanzu-mission-control = {
-      source = "vmware/tanzu-mission-control"
-      version = "1.4.4"
-    }
-  }
-}
-
 data "tanzu-mission-control_cluster_class" "tkc-cc" {
   name                    = var.cluster_name
   management_cluster_name = var.management_cluster_name
