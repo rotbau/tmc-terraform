@@ -1,23 +1,3 @@
-// TMC terraform provider initialization
-
-terraform {
-  required_providers {
-    tanzu-mission-control = {
-      source = "vmware/tanzu-mission-control"
-      version = "1.4.4"
-    }
-  }
-}
-
-// TMC Org configuration
-
-provider "tanzu-mission-control" {
-  endpoint            = var.vmw_tmc_endpoint // Required, TMC Org URL
-  vmw_cloud_api_token = var.vmw_cloud_api_token   // Required, API Token
-}
-
-//variable "SESSION_NAMESPACE" {}
-
 # Create Tanzu Mission Control cluster group
 resource "tanzu-mission-control_cluster_group" "create_cluster_group" {
   name = var.cluster_group
