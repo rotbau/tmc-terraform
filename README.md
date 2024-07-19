@@ -59,7 +59,9 @@ This repo provides an example use the Tanzu Mission Control Terraform module.  T
 ```    
 My implementation defines each directory under team-a as a workspace in Terrafrom.  However can be combined however you need.  Team-a folder can be replicated and adjusted for each team you need to manage infrastructure for.
 
-To-Do: Add EKS cluster creation
+### To-Do
+- Add EKS cluster creation
+- Refine addon code
  
 ## TMC Cluster Group Configuration
 
