@@ -1,16 +1,3 @@
-// TMC terraform provider initialization
-
-terraform {
-  required_providers {
-    tanzu-mission-control = {
-      source = "vmware/tanzu-mission-control"
-      version = "1.4.4"
-    }
-  }
-}
-
-//variable "SESSION_NAMESPACE" {}
-
 resource "tanzu-mission-control_akscluster" "AKS_cluster" {
   credential_name = var.credential_name
   subscription_id = var.azure_subscription_id
