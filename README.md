@@ -63,6 +63,10 @@ My implementation defines each directory under team-a as a workspace in Terrafro
 - Add EKS cluster creation
 - Multiple NTP to TKGs clusters
 - Refine addon code
+
+## TMC Terraform Provider Documentation
+
+https://registry.terraform.io/providers/vmware/tanzu-mission-control/latest
  
 ## TMC Cluster Group Configuration
 
