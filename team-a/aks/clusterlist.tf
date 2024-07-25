@@ -9,7 +9,7 @@ variable "clusterlist" {
       name_prefix = "teama-aks-dev"
       location = "westus2"
       resource_group = "bauerbo"
-      k8s_version = "1.28.9"
+      k8s_version = "1.29.5"
       node_count = 1
       vm_size = "Standard_DS3_v2"
       backup_enabled  = "false"
